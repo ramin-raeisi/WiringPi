@@ -1,0 +1,52 @@
+add_library(WiringPi STATIC
+  ads1115.c
+  max5322.c
+  mcp3004.c
+  pseudoPins.c
+  wiringPi.c
+  bmp180.c
+  mcp23008.c
+  mcp3422.c
+  rht03.c
+  wiringPiI2C.c
+  drcNet.c
+  mcp23016.c
+  mcp4802.c
+  sn3218.c
+  wiringPiSPI.c
+  drcSerial.c
+  mcp23017.c
+  pcf8574.c
+  softPwm.c
+  wiringSerial.c
+  ds18b20.c
+  mcp23s08.c
+  pcf8591.c
+  softServo.c
+  wiringShift.c
+  htu21d.c
+  mcp23s17.c
+  piHiPri.c
+  softTone.c
+  wpiExtensions.c
+  max31855.c
+  mcp3002.c
+  piThread.c
+  sr595.c
+)
+
+target_include_directories(WiringPi
+  PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+target_link_libraries(WiringPi
+  PRIVATE
+    rt
+    crypt
+)
+
+set_target_properties(WiringPi 
+  PROPERTIES 
+    LINKER_LANGUAGE C
+)
