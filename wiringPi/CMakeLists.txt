@@ -35,6 +35,11 @@ add_library(WiringPi
   sr595.c
 )
 
+target_include_directories(WiringPi
+  PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
 set_target_properties(WiringPi 
   PROPERTIES 
     LINKER_LANGUAGE CXX
