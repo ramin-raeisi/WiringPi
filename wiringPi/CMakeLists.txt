@@ -40,7 +40,13 @@ target_include_directories(WiringPi
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
+target_link_libraries(WiringPi
+  PRIVATE
+    rt
+    crypt
+)
+
 set_target_properties(WiringPi 
   PROPERTIES 
-    LINKER_LANGUAGE CXX
+    LINKER_LANGUAGE C
 )
