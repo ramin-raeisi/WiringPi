@@ -34,3 +34,8 @@ add_library(WiringPi
   piThread.c
   sr595.c
 )
+
+set_target_properties(WiringPi 
+  PROPERTIES 
+    LINKER_LANGUAGE CXX
+)
