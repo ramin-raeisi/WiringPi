@@ -1,4 +1,4 @@
-add_library(WiringPi
+add_library(WiringPi STATIC
   ads1115.c
   max5322.c
   mcp3004.c
